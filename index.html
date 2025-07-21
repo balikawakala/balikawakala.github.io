@@ -983,17 +983,17 @@
                 <div class="stat-label">Faida ya Juu Zaidi</div>
             </div>
             
-            <!-- Contact Info -->
+            <!-- Features Card -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Mawasiliano</h3>
-                    <i class="fas fa-phone card-icon"></i>
+                    <h3 class="card-title">Huduma Zetu</h3>
+                    <i class="fas fa-star card-icon"></i>
                 </div>
                 <div style="line-height: 2;">
-                    <p><i class="fas fa-user"></i> <strong>Msimamizi:</strong> Abada Bayuyu</p>
-                    <p><i class="fas fa-phone"></i> <strong>Simu:</strong> 0687537030</p>
-                    <p><i class="fas fa-paper-plane"></i> <strong>Telegram:</strong> @BalikaWakalaBot</p>
-                    <p><i class="fab fa-github"></i> <strong>GitHub:</strong> github.com/balikawakala</p>
+                    <p><i class="fas fa-check-circle" style="color: var(--success);"></i> <strong>Uwekezaji wa Usalama</strong></p>
+                    <p><i class="fas fa-check-circle" style="color: var(--success);"></i> <strong>Faida ya Haraka</strong></p>
+                    <p><i class="fas fa-check-circle" style="color: var(--success);"></i> <strong>Huduma za 24/7</strong></p>
+                    <p><i class="fas fa-check-circle" style="color: var(--success);"></i> <strong>Mitandao Yote</strong></p>
                 </div>
             </div>
         </div>
@@ -1005,8 +1005,9 @@
             <div class="footer-section">
                 <h3>Balika Wakala Tanzania</h3>
                 <p>Jukwaa la kwanza la uwekezaji wa mitandao ya simu nchini Tanzania. Fanya biashara ya uwakala online na upate faida kubwa.</p>
-                <p style="margin-top: 15px;"><strong>Msimamizi:</strong> Abada Bayuyu</p>
-                <p><strong>Simu:</strong> 0687537030 (Baraka Laizer)</p>
+                <p style="margin-top: 15px;">
+                    <strong>Jukwaa la kimataifa la uwekezaji wa uwakala.</strong>
+                </p>
             </div>
             
             <div class="footer-section">
@@ -1033,12 +1034,12 @@
         </div>
         
         <div class="copyright">
-            <p>&copy; 2024 Balika Wakala Tanzania. Haki zote zimehifadhiwa. | Msimamizi: Abada Bayuyu</p>
+            <p>&copy; 2024 Balika Wakala Tanzania. Haki zote zimehifadhiwa.</p>
         </div>
     </footer>
     
     <script>
-        // Configuration - UPDATE THIS WITH YOUR RAILWAY URL
+        // Configuration - Your actual Railway URL
         const API_BASE_URL = 'https://balika-wakala-backend-production.up.railway.app/api';
         
         // Global variables
@@ -1371,7 +1372,7 @@
                 if (!currentPaymentId || checkCount >= maxChecks) {
                     clearInterval(paymentCheckInterval);
                     if (checkCount >= maxChecks) {
-                        showPaymentStatus('pending', 'Bado inasubiri uhakikisho. Wasiliana na msimamizi: 0687537030');
+                        showPaymentStatus('pending', 'Bado inasubiri uhakikisho. Wasiliana na msimamizi ikiwa unahitaji msaada.');
                     }
                     return;
                 }
@@ -1395,7 +1396,7 @@
                         }, 15000);
                         
                     } else if (payment.status === 'rejected') {
-                        showPaymentStatus('rejected', 'Malipo yamekataliwa. Hakikisha umetuma kwa namba sahihi: 0687537030 (Baraka Laizer)');
+                        showPaymentStatus('rejected', 'Malipo yamekataliwa. Hakikisha umetuma kwa namba sahihi na ujaribu tena.');
                         
                         clearInterval(paymentCheckInterval);
                         currentPaymentId = null;
@@ -1514,8 +1515,7 @@
             if (hostname === 'localhost' || hostname === '127.0.0.1') {
                 return 'http://localhost:3000/api';
             } else if (hostname.includes('github.io')) {
-                // UPDATE THIS WITH YOUR ACTUAL RAILWAY URL
-                return 'https://your-railway-app-production.up.railway.app/api';
+                return 'https://balika-wakala-backend-production.up.railway.app/api';
             } else {
                 return API_BASE_URL;
             }
@@ -1581,9 +1581,7 @@
             
             console.log('🚀 Balika Wakala Tanzania initialized');
             console.log('🔗 API URL:', API_BASE_URL);
-            console.log('👨‍💼 Admin: Abada Bayuyu');
-            console.log('📞 Payment: 0687537030 (Baraka Laizer)');
-            console.log('🐙 GitHub: https://github.com/balikawakala');
+            console.log('🌐 GitHub: https://github.com/balikawakala');
         });
 
         // Global error handlers
